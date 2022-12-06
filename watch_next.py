@@ -53,5 +53,6 @@ def best_match():
     print("\nBest possible match is a '{}',".format(movie_name))
     print("with the highest similarity score of {}\n".format(round(score, 2)))
 
+
 #====Init====#
 best_match()
