@@ -6,6 +6,10 @@ nlp1 = spacy.load('en_core_web_md')
 nlp2 = spacy.load('en_core_web_sm')
 
 #====Function====#
+"""
+Function to compare predict similarities between words in a list
+using different spaCy modules and print the score
+"""
 def compare_word(word_list, nlp_mod):
     print(nlp_mod(word_list[0]).similarity(nlp_mod(word_list[1])))
     print(nlp_mod(word_list[0]).similarity(nlp_mod(word_list[2])))
@@ -15,6 +19,8 @@ def compare_word(word_list, nlp_mod):
 word1 = ['cat', 'monkey', 'banana']
 word2 = ['spider', 'drain', 'rain']
 
+
+# Calling function with different modules and lists as parameters
 compare_word(word1, nlp1)
 compare_word(word2, nlp1)
 
@@ -25,6 +31,7 @@ draw a connection there with the second highest similarity score; Well, cat and
 banana has a lowest similarity score, which makes sense when tking in account
 words we have used.
 """
+
 
 compare_word(word1, nlp2)
 
